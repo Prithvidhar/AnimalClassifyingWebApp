@@ -1,0 +1,17 @@
+<HTML>
+    <h1>Image Classification Application</h1>
+    <p> This is a web app that classifies images of wild animals into respective categories</p>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form}}
+        <button type="submit">Upload</button>
+    </form>
+    {%if image_uri is not None%}
+        <p>Predictied label is {{predict}}</p>
+        <img src = {{image_uri}}>
+    {%else%}
+        <p>No image provided</p>
+    
+    {%endif%}
+
+</HTML>
