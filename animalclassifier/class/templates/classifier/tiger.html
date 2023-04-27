@@ -24,8 +24,8 @@
                 <li class="list-group-item">Cheetah</li>
                 <li class="list-group-item">Fox</li>
                 <li class="list-group-item">Hyena</li>
-                <li class="list-group-item active">Lion</li>
-                <li class="list-group-item">Tiger</li>
+                <li class="list-group-item">Lion</li>
+                <li class="list-group-item active">Tiger</li>
                 <li class="list-group-item">Wolf</li>
             </ul>
             <p class="mt-5 mb-5 h5">To use the tool, simply upload your image using the form below and click the 'upload' button. The prediction will be displayed in the card to the left after reloading the page</p>
@@ -35,20 +35,16 @@
                 <button class="btn-lg btn-primary" type="submit">Upload</button>
             </form>
         </div>
-        <div class="col-4 d-flex justify-content-center" style="background-color: rgb(198, 148, 82);">
-            <div class="card shadow" style="width: 25rem; background-color: rgb(225, 214, 186);">
+        <div class="col-4 d-flex justify-content-center" style="background-color: rgb(216, 152, 72);">
+            <div class="card shadow" style="width: 25rem; background-color: rgb(36, 18, 5); color: white;">
                 {%if image_uri is not None%}
                     <img class="img-thumbnail mx-auto" style="object-fit: cover; width:400px; height: 400px;" src = {{image_uri}}>
             <div class="card-body">
                 <h5 class="card-title"><p>{{predict}}</p></h5>
                 <p class="card-text">My Model thinks this is an image of a {{predict}}</p>
                 <blockquote class="blockquote mb-0">
-                    <p>Lions do most of their hunting at night as their eyes have adapted to the dark and this gives them a huge advantage over their prey. 
-
-                        They hunt more during storms as the noise and wind make it harder for prey to see and hear them.  
-                        
-                        When hunting, lionesses have specific roles. Some play the role of 'centre' and others the role of 'wing' - the wings chase the prey towards the centres. </p>
-                    <footer class="blockquote-footer"><cite title="Source Title">www.wwf.org.uk</cite></footer>
+                    <p>The largest of all the Asian big cats, tigers rely primarily on sight and sound rather than smell for hunting. They typically hunt alone and stalk prey. A tiger can consume more than 80 pounds of meat at one time. On average, tigers give birth to two to four cubs every two years.  </p>
+                    <footer class="blockquote-footer"><cite title="Source Title">worldwildlife.org</cite></footer>
                 </blockquote>
             </div>
                 {%else%}

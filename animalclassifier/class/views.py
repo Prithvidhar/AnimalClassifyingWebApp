@@ -10,7 +10,7 @@ import os
 from PIL import Image 
 
 PATH = csv_path = os.path.join(os.path.dirname(__file__), 'state_dict_model.pt')
-Labels = {0: 'cheetah', 1: 'fox', 2: 'hyena', 3: 'lion', 4: 'tiger',5:'wolf'}
+Labels = {0: 'Cheetah', 1: 'Fox', 2: 'Hyena', 3: 'Lion', 4: 'Tiger',5:'Wolf'}
 trans = torchvision.transforms.Compose([
     torchvision.transforms.RandAugment(),
     torchvision.transforms.AutoAugment(),
@@ -110,6 +110,14 @@ def index(request):
     else:
         form = AnimalForm()
         context = {'form': form, 'predict': predictedlabel,'image_uri': image_uri}
+    if predictedlabel == 'Fox':
+        return render(request,'classifier/fox.html',context)
+    elif predictedlabel == 'Hyena':
+        return render(request,'classifier/hyena.html',context)
+    elif predictedlabel == 'Tiger':
+        return render(request,'classifier/tiger.html',context)
+    elif predictedlabel == 'Wolf':
+        return render(request,'classifier/wolf.html',context)
 
     return render(request,'classifier/index.html',context)
 

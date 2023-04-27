@@ -23,8 +23,8 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Cheetah</li>
                 <li class="list-group-item">Fox</li>
-                <li class="list-group-item">Hyena</li>
-                <li class="list-group-item active">Lion</li>
+                <li class="list-group-item active">Hyena</li>
+                <li class="list-group-item">Lion</li>
                 <li class="list-group-item">Tiger</li>
                 <li class="list-group-item">Wolf</li>
             </ul>
@@ -35,20 +35,18 @@
                 <button class="btn-lg btn-primary" type="submit">Upload</button>
             </form>
         </div>
-        <div class="col-4 d-flex justify-content-center" style="background-color: rgb(198, 148, 82);">
-            <div class="card shadow" style="width: 25rem; background-color: rgb(225, 214, 186);">
+        <div class="col-4 d-flex justify-content-center" style="background-color: #89866E;">
+            <div class="card shadow" style="width: 25rem; background-color: #CD8F54;">
                 {%if image_uri is not None%}
                     <img class="img-thumbnail mx-auto" style="object-fit: cover; width:400px; height: 400px;" src = {{image_uri}}>
             <div class="card-body">
                 <h5 class="card-title"><p>{{predict}}</p></h5>
                 <p class="card-text">My Model thinks this is an image of a {{predict}}</p>
                 <blockquote class="blockquote mb-0">
-                    <p>Lions do most of their hunting at night as their eyes have adapted to the dark and this gives them a huge advantage over their prey. 
+                    <p>Despite being depicted as dumb and crude, Hyenas are one of the most intelligent and socially sophisticated mammals in the world. 
 
-                        They hunt more during storms as the noise and wind make it harder for prey to see and hear them.  
-                        
-                        When hunting, lionesses have specific roles. Some play the role of 'centre' and others the role of 'wing' - the wings chase the prey towards the centres. </p>
-                    <footer class="blockquote-footer"><cite title="Source Title">www.wwf.org.uk</cite></footer>
+                        Hyenas have a large frontal cortex of the brain and studies have shown that hyenas perform better problem-solving abilities and social cooperation than chimpanzees. A study by Duke University found that hyenas achieved social cooperation, in silence, without any verbal communication. </p>
+                    <footer class="blockquote-footer"><cite title="Source Title">africantravelcanvas.com</cite></footer>
                 </blockquote>
             </div>
                 {%else%}

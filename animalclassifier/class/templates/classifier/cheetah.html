@@ -21,10 +21,10 @@
         <div class="col-8 mb-2 border">
             <p class="lead h1">Hey, Welcome to my web app. This application can help you classify your wildlife images into the following categories: </p><br>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cheetah</li>
+                <li class="list-group-item active">Cheetah</li>
                 <li class="list-group-item">Fox</li>
                 <li class="list-group-item">Hyena</li>
-                <li class="list-group-item active">Lion</li>
+                <li class="list-group-item">Lion</li>
                 <li class="list-group-item">Tiger</li>
                 <li class="list-group-item">Wolf</li>
             </ul>
@@ -35,20 +35,16 @@
                 <button class="btn-lg btn-primary" type="submit">Upload</button>
             </form>
         </div>
-        <div class="col-4 d-flex justify-content-center" style="background-color: rgb(198, 148, 82);">
-            <div class="card shadow" style="width: 25rem; background-color: rgb(225, 214, 186);">
+        <div class="col-4 d-flex justify-content-center" style="background-color: rgb(3, 5, 15);">
+            <div class="card shadow" style="width: 25rem; background-color: rgb(242, 218, 157);">
                 {%if image_uri is not None%}
                     <img class="img-thumbnail mx-auto" style="object-fit: cover; width:400px; height: 400px;" src = {{image_uri}}>
             <div class="card-body">
                 <h5 class="card-title"><p>{{predict}}</p></h5>
                 <p class="card-text">My Model thinks this is an image of a {{predict}}</p>
                 <blockquote class="blockquote mb-0">
-                    <p>Lions do most of their hunting at night as their eyes have adapted to the dark and this gives them a huge advantage over their prey. 
-
-                        They hunt more during storms as the noise and wind make it harder for prey to see and hear them.  
-                        
-                        When hunting, lionesses have specific roles. Some play the role of 'centre' and others the role of 'wing' - the wings chase the prey towards the centres. </p>
-                    <footer class="blockquote-footer"><cite title="Source Title">www.wwf.org.uk</cite></footer>
+                    <p>The fastest land animal in the world, a cheetah can reach 112km/h in just three seconds – that’s faster than a sports car accelerates! Its body has evolved for speed, with long legs, an elongated spine, adapted claws to grip the ground and a long tail for balance.</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">www.natgeokids.com</cite></footer>
                 </blockquote>
             </div>
                 {%else%}
