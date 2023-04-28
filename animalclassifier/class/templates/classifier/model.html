@@ -1,0 +1,67 @@
+{%load static%}
+<html>
+    <title>How it works</title>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link " aria-current="page" href="http://127.0.0.1:8000/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="http://127.0.0.1:8000/howitworks">How it works</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </nav>
+
+
+    </head>
+    <div class="row d-flex justify-content-center">
+        <h1 class="lead display-3 text-center mb-3">How it works</h1>
+        <img class="img-fluid mb-5" src="{%static 'wildanimalModel.png'%}">
+    </div>
+    <div class="container-fluid">
+        <p class="fs-2">The image above is a visualization of the model I built to classify the images. The model was built using PyTorch and containers the following layers:</p>
+        <pre>
+            <code>
+class Model(nn.Module):
+    def __init__(self):
+        super().__init__()
+        #Feature extraction
+        self.conv= nn.Conv2d(3,64,9)
+        self.conv2 = nn.Conv2d(64,128,5)
+        self.conv3 = nn.Conv2d(128,256,5)
+        self.conv4 = nn.Conv2d(256,512,5)
+        self.conv5 = nn.Conv2d(512,1024,5)
+        self.bat2d1 = nn.BatchNorm2d(64)
+        self.bat2d2 = nn.BatchNorm2d(128)
+        self.bat2d3 = nn.BatchNorm2d(256)
+        self.bat2d4 = nn.BatchNorm2d(512)
+        self.bat2d5 = nn.BatchNorm2d(1024)
+        self.bat1d = nn.BatchNorm1d(196)
+        self.bat1d2 = nn.BatchNorm1d(256)
+
+        self.dropout = nn.Dropout(p= 0.8)
+        self.dropout2 = nn.Dropout(p=0.5)
+
+        
+        #Classification layer
+        self.lin = nn.Linear(1024*5*5,196)
+        self.lin3 = nn.Linear(196,256)
+
+        self.lin2 = nn.Linear(256,6)
+            </code>
+        </pre>
+    </div>
+
+    
+</html>

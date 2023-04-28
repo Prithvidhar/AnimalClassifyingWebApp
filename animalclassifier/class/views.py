@@ -120,4 +120,6 @@ def index(request):
         return render(request,'classifier/wolf.html',context)
 
     return render(request,'classifier/index.html',context)
+def howitworks(request):
+    return render(request,'classifier/model.html',{})
 
