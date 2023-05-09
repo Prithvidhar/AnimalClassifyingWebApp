@@ -9,6 +9,8 @@ import base64
 import os
 from PIL import Image 
 
+from django.shortcuts import redirect
+
 PATH = csv_path = os.path.join(os.path.dirname(__file__), 'state_dict_model.pt')
 Labels = {0: 'Cheetah', 1: 'Fox', 2: 'Hyena', 3: 'Lion', 4: 'Tiger',5:'Wolf'}
 trans = torchvision.transforms.Compose([
@@ -118,8 +120,12 @@ def index(request):
         return render(request,'classifier/tiger.html',context)
     elif predictedlabel == 'Wolf':
         return render(request,'classifier/wolf.html',context)
+    elif predictedlabel == 'Cheetah':
+        return render(request,'classifier/cheetah.html',context)
 
     return render(request,'classifier/index.html',context)
 def howitworks(request):
     return render(request,'classifier/model.html',{})
 
+def view_404(request, exception=None):
+    return redirect('/') 

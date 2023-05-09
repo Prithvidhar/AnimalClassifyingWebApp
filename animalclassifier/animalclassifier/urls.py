@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 
+handler404 = 'class.views.view_404' 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('class.urls'))
