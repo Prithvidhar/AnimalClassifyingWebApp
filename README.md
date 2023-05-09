@@ -1,5 +1,5 @@
 # Animal Image Classifier Web Application
-![image](https://github.com/Prithvidhar/CSE4310Final/assets/62158749/ca96ed6e-5f19-4f9c-940a-6c75297c0201)
+![image](https://github.com/Prithvidhar/AnimalClassifyingWebApp/assets/62158749/a4326312-16f0-49dc-8409-4562c7c3d8ef)
 This application allows users to upload images of wild animals and have my image classifier guess what animal the user's image contains
 ## Installation
 1. To use this application, it is recommended to clone this repository to your local machine. Dowloading the repository as a zip file also works, make sure you extract the files to your prefered directory.
